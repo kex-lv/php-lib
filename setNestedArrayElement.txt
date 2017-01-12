@@ -1,0 +1,6 @@
+$temp = &$data;
+foreach($exploded as $key) {
+    $temp = &$temp[$key];
+}
+$temp = $value;
+unset($temp);

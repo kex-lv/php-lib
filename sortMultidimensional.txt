@@ -1,0 +1,24 @@
+	
+function sortMultidimensional() {
+	usort($myArray, function($a, $b) {
+		return $a['order'] - $b['order'];
+	});
+}
+
+usort($priorities, function($a, $b)
+{
+    if ($a == $b)
+    {
+        echo "a ($a) is same priority as b ($b), keeping the same\n";
+        return 0;
+    }
+    else if ($a > $b)
+    {
+        echo "a ($a) is higher priority than b ($b), moving b down array\n";
+        return -1;
+    }
+    else {
+        echo "b ($b) is higher priority than a ($a), moving b up array\n";                
+        return 1;
+    }
+});
